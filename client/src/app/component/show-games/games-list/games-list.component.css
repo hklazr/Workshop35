@@ -1,0 +1,7 @@
+.main-container {
+    max-width: 600px;
+}
+
+.pagination {
+    justify-content: space-between;
+}

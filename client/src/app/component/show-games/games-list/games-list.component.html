@@ -1,0 +1,22 @@
+<div class="container main-container">
+    <div class="row">
+        <div class="col">
+
+            <div class="form-group">
+                <label for="gamesPerPage">Games Per Page:</label>
+                <select class="form-control" id="gamesPerPage" #gamesPerPageSelect (change)="onSelect(gamesPerPageSelect.value)">
+                    <option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <app-description></app-description>
+
+    <div class="row">
+        <div class="col d-flex justify-content-between">
+            <button class="btn btn-primary" id="previousBtn" (click)="previousPage()" [disabled]="disablePrevious">Previous</button>
+            <button class="btn btn-primary" id="nextBtn" (click)="nextPage()">Next</button>
+        </div>
+    </div>
+</div>
